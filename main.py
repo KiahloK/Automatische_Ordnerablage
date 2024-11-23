@@ -6,15 +6,15 @@ import shutil
 
 
 # Bezugsordner
-bezugs_ordner = "./asd/"
+bezugs_ordner = input("Setze bitte den Pfad vom Bezugsordner ein:") + "/"
 
 # Zielordner
-ziel_ordner = "./ordnerneu/"
+ziel_ordner = input("Setze bitte den Pfad vom Zielordner ein:") + "/"
+
 
 def copy_file(file):
     """
         Copies a file from the source to the destination.
-
         """
     fileWithJpeg = file + ".jpeg"
     try:
@@ -64,7 +64,7 @@ def work_on_file(file):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    pictures = get_pictures("./asd")
+    pictures = get_pictures(bezugs_ordner)
 
     for picture in pictures:
         picture = picture.removesuffix(".jpeg")
